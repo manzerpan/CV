@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>个人简历</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>潘一峰</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -16,6 +16,7 @@ a:active, a:hover { outline: 0px; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -24,14 +25,14 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -47,7 +48,7 @@ sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); 
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
+figure > table { margin: 0px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
@@ -82,17 +83,19 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
@@ -151,6 +154,10 @@ svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+  .typora-export h1::after, .typora-export h2::after, .typora-export h3::after, .typora-export h4::after, .typora-export h5::after, .typora-export h6::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
+}
 
 
 .CodeMirror { height: auto; }
@@ -233,12 +240,16 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
 
 @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
-html {
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
     font-size: 16px;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -249,6 +260,19 @@ body {
   	padding: 30px;
     padding-bottom: 100px;
 }
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
 #write > ul:first-child,
 #write > ol:first-child{
     margin-top: 30px;
@@ -303,17 +327,30 @@ h6 code {
     font-size: inherit;
 }
 h1 {
-    padding-bottom: .3em;
     font-size: 2.25em;
     line-height: 1.2;
     border-bottom: 1px solid #eee;
 }
 h2 {
-   padding-bottom: .3em;
     font-size: 1.75em;
     line-height: 1.225;
     border-bottom: 1px solid #eee;
 }
+
+@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        border-top: 1px solid #eee;
+        margin-top: .3em;
+    }
+}
+
 h3 {
     font-size: 1.5em;
     line-height: 1.43;
@@ -576,8 +613,11 @@ header, .context-menu, .megamenu-content, footer{
 
 </style>
 </head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="center潘一峰简历center" class="md-header-anchor"></a><center><span>潘一峰简历</span></center></h1><h1><a name="个人信息" class="md-header-anchor"></a><span>个人信息  </span></h1><ul><li><span>潘一峰/男/1995</span></li><li><span>专科/软件工程 </span></li><li><span>工作年限：3年</span></li><li><span>期望职位：前端工程师</span></li></ul><h1><a name="联系方式" class="md-header-anchor"></a><span>联系方式</span></h1><ul><li><span>手机：17612090982</span></li><li><span>Email：</span><a href='mailto:manzerpan@foxmail.com' target='_blank' class='url'>manzerpan@foxmail.com</a><span> </span></li></ul><p>&nbsp;</p><h1><a name="工作经历" class="md-header-anchor"></a><span>工作经历</span></h1><h2><a name="广州聚效网络科技有限公司--201712--201910-）" class="md-header-anchor"></a><span>广州聚效网络科技有限公司 （ 2017.12 ~ 2019.10 ）</span></h2><h3><a name="喵喵语音webview活动页面常驻页面" class="md-header-anchor"></a><span>喵喵语音webview活动页面、常驻页面</span></h3><p><span>喵喵语音内辅助功能开发，大部分使用Vue全家桶进行开发，主要开发1周/次的活动，部分原生实现较为麻烦的常驻功能也由webview进行实现，完成了每日签到、抽奖转盘、集卡兑换等功能，处理较多iOS和Android兼容性及webview与客户端、后端互通等问题。</span></p><h3><a name="声鉴卡小程序" class="md-header-anchor"></a><span>声鉴卡小程序</span></h3><p><span>一款根据用户上传的音频对用户的声音进行标签化（御姐音、正太音以及声音年龄等）的小程序，小程序原生开发，个人完成用户中心、历史纪录、音频上传、个人海报分享（canvas生成）等所有功能。</span></p><h3><a name="甜甜拍卖小程序" class="md-header-anchor"></a><span>甜甜拍卖小程序</span></h3><p><span>甜甜拍卖可以选择某一件事（例如陪同聊天或打游戏一小时）或自定义事件进行拍卖，作为现有APP的辅助功能，实现APP内主播和用户之间的互动，小程序原生开发。</span></p><h3><a name="喵喵语音小程序" class="md-header-anchor"></a><span>喵喵语音小程序</span></h3><p><span>语音房聊天小程序，对接第三方SDK（云信、声网），使用小程序live-player以及live-pusher组件进行推拉流，一个房间最多9人同时推流。IM及房间管理功能基于云信SDK，因为同时有3个socket而小程序只限制2个所以对socket进行断连的操作频繁，因此和现有的喵喵语音APP功能上略有不同，小程序原生开发，个人完成语音房间内推拉流、权限管理、IM等所有对接。</span></p><h3><a name="喵喵语音公众号常驻页" class="md-header-anchor"></a><span>喵喵语音公众号常驻页</span></h3><p><span>完成了公众号登陆功能、充值功能、提现功能、下载引导功能、兑换功能以及分享功能，基于微信JS-SDK实现。</span></p><p>&nbsp;</p><h2><a name="广州爱美互动网络科技有限公司--201708--201711-）" class="md-header-anchor"></a><span>广州爱美互动网络科技有限公司 （ 2017.08 ~ 2017.11 ）</span></h2><h3><a name="微拍兔微信小程序）" class="md-header-anchor"></a><span>微拍兔（微信小程序）  </span></h3><p><span>微拍兔是一款表情包平台，用户可以直接使用平台提供的表情包，也可自己上传图片或视频制作自己的表情包。</span></p><p><span>个人负责自定义表情包的功能，对用户上传的图片和视频进行二次处理，主要围绕小程序提供的image和video媒体组件进行开发。</span></p><h3><a name="朋友竞猜微信小程序）" class="md-header-anchor"></a><span>朋友竞猜（微信小程序）</span></h3><p><span>一款朋友之间答题比赛的小程序，提供影视、生活等多类型题目，每道题限时5秒，用户答题的正确率以及所花的时间作为比拼结果，个人完成小程序所有内容。</span></p><h3><a name="智能算命微信公众号）" class="md-header-anchor"></a><span>智能算命（微信公众号）</span></h3><p><span>公众号活动，使用用户输入信息以及依靠微信JS-SDK提供的用户个人数据，根据数据内容给出推测结果。</span></p><p>&nbsp;</p><h2><a name="赣州市拓源网络科技有限公司-201606--201705-）" class="md-header-anchor"></a><span>赣州市拓源网络科技有限公司（ 2016.06 ~ 2017.05 ）</span></h2><h3><a name="企业后台系统" class="md-header-anchor"></a><span>企业后台系统</span></h3><p><span>一款后台系统，个人完成完成部分 ，技术使用jQuery + Bootstrap。</span></p><h1><a name="技能清单" class="md-header-anchor"></a><span>技能清单</span></h1><p><span>以下均为我熟练使用的技能</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- Web开发：HTML5 + CSS3/ES5、ES6/Node</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 前端框架：Vue</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 前端工具：Gulp/Sass/Less/Webpack &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 版本管理工具：Svn/Git</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 其他：小程序开发、微信公众号开发</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 112px;"></div><div class="CodeMirror-gutters" style="display: none; height: 112px;"></div></div></div></pre><hr /><h1><a name="致谢" class="md-header-anchor"></a><span>致谢</span></h1><p><span>感谢您花时间阅读我的简历，期待能有机会和您共事。</span>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="center潘一峰简历center" class="md-header-anchor"></a><center><span>潘一峰简历</span></center></h1><h1><a name="个人信息" class="md-header-anchor"></a><span>个人信息  </span></h1><ul><li><span>潘一峰/男/1995</span></li><li><span>专科/软件工程 </span></li><li><span>工作年限：4年</span></li><li><span>期望职位：前端工程师</span></li></ul><h1><a name="联系方式" class="md-header-anchor"></a><span>联系方式</span></h1><ul><li><span>手机：17612090982</span></li><li><span>Email：</span><a href='mailto:manzerpan@foxmail.com' target='_blank' class='url'>manzerpan@foxmail.com</a><span> </span></li></ul><p>&nbsp;</p><h1><a name="工作经历" class="md-header-anchor"></a><span>工作经历</span></h1><h2><a name="广州海岛游网络科技有限公司--20204--20198-）" class="md-header-anchor"></a><span>广州海岛游网络科技有限公司 （ 2020.4 ~ 2019.8 ）</span></h2><h3><a name="pago官网" class="md-header-anchor"></a><span>PAGO官网</span></h3><p><span>PAGO语音项目官网及下载页</span>
+<span>技术实现：Vue</span></p><h3><a name="pagowebview内嵌页面" class="md-header-anchor"></a><span>PAGOwebview内嵌页面</span></h3><p><span>PAGOwebview页面（每日签到扭蛋、钱包、充值 Codapay Paytm、座驾及头饰商城、第三方币商、榜单等）</span>
+<span>技术实现：React + next.js + PM2</span></p><h3><a name="pago管理后台" class="md-header-anchor"></a><span>PAGO管理后台</span></h3><p><span>技术实现：Vue + Element-UI</span></p><p>&nbsp;</p><h2><a name="广州聚效网络科技有限公司--201712--201910-）" class="md-header-anchor"></a><span>广州聚效网络科技有限公司 （ 2017.12 ~ 2019.10 ）</span></h2><h3><a name="喵喵语音官网" class="md-header-anchor"></a><span>喵喵语音官网</span></h3><p><span>喵喵语音官网且实现二维码登录以及音乐上传功能</span>
+<span>技术实现：Vue全家桶</span></p><h3><a name="喵喵语音活动页面常驻页面" class="md-header-anchor"></a><span>喵喵语音活动页面、常驻页面</span></h3><p><span>喵喵语音webview页面（日常活动、通用榜单、转盘、扭蛋、二级货币转盘等）</span></p><h3><a name="喵喵语音小程序" class="md-header-anchor"></a><span>喵喵语音小程序</span></h3><p><span>基于喵喵语音APP移植到微信小程序，对接第三方SDK（云信、声网），使用小程序live-player以及live-pusher组件进行音频推拉流。</span></p><h3><a name="喵喵语音公众号常驻页" class="md-header-anchor"></a><span>喵喵语音公众号常驻页</span></h3><p><span>通过微信JS-SDK实现个人登录、充值、体现、下载、分享等功能。</span></p><p>&nbsp;</p><h2><a name="广州爱美互动网络科技有限公司--201708--201711-）" class="md-header-anchor"></a><span>广州爱美互动网络科技有限公司 （ 2017.08 ~ 2017.11 ）</span></h2><h3><a name="微拍兔微信小程序）-包会说微信小程序）-朋友竞猜微信小程序）" class="md-header-anchor"></a><span>微拍兔（微信小程序） 包会说（微信小程序） 朋友竞猜（微信小程序） </span></h3><p><span>一系列小程序（表情包制作、口令红包、答题竞猜）的开发，迭代。主要围绕小程序提供的audio、image、video等媒体组件进行开发。</span></p><h3><a name="智能算命微信公众号）" class="md-header-anchor"></a><span>智能算命（微信公众号）</span></h3><p><span>公众号活动，使用用户输入信息以及依靠微信JS-SDK提供的用户个人数据，根据数据内容给出推测结果。</span></p><p>&nbsp;</p><h2><a name="赣州市拓源网络科技有限公司-201606--201705-）" class="md-header-anchor"></a><span>赣州市拓源网络科技有限公司（ 2016.06 ~ 2017.05 ）</span></h2><h3><a name="企业cms系统" class="md-header-anchor"></a><span>企业CMS系统</span></h3><p><span>完成CMS系统前端部分 (jQuery + Bootstrap)。</span></p><h1><a name="技能清单" class="md-header-anchor"></a><span>技能清单</span></h1><p><span>以下均为我熟练使用的技能</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- Web开发：HTML5 + CSS3/ES5、ES6/Node</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 前端框架：Vue全家桶/React</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 前端工具：Gulp/SaSS/LeSS/Webpack &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 版本管理工具：Svn/Git</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 其他：小程序开发、基于微信JS-SDK开发</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div><div class="CodeMirror-gutters" style="display: none; height: 115px;"></div></div></div></pre><hr /><h1><a name="致谢" class="md-header-anchor"></a><span>致谢</span></h1><p><span>感谢您花时间阅读我的简历，期待能有机会和您共事。</span>
 <span>      </span></p></div>
 </body>
 </html>
